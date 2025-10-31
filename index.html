@@ -7,11 +7,16 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Bouton mode sombre/clair -->
+    <button class="theme-toggle" id="themeToggle">🌙</button>
+
+    <!-- Header -->
     <header class="header">
         <h1>🪄 Les Grands Inventeurs</h1>
         <p>Découvrez les génies du VIIIᵉ au XIIIᵉ siècle qui ont façonné notre monde</p>
     </header>
 
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <ul class="nav-links">
@@ -23,36 +28,66 @@
         </div>
     </nav>
 
+    <!-- Contenu principal -->
     <main class="main-content">
-        <div class="container fade-in">
+        <!-- Barre de recherche améliorée -->
+        <div class="container fade-in-scroll">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="🔍 Rechercher un inventeur (ex: Al-Khwarizmi, Ibn Sina, chirurgie...)" class="search-input">
+                <div id="searchResults" class="search-results"></div>
+            </div>
+        </div>
+
+        <div class="container fade-in-scroll">
             <h2>Bienvenue dans l'Âge d'Or des Inventions</h2>
             <p>Plongez dans l'univers fascinant des plus grands esprits scientifiques du Moyen Âge. De la médecine à l'astronomie, ces pionniers ont posé les fondations de la science moderne.</p>
             
             <div class="card-grid">
-                <div class="card">
+                <div class="card" data-search="médecine chirurgie al-zahrawi ibn-sina al-razi santé hopital médicament">
                     <div class="card-icon">🧬</div>
                     <h3>Médecine Révolutionnaire</h3>
                     <p>Découvrez les avancées médicales qui ont sauvé des millions de vies</p>
                     <a href="pages/medecine.html" class="btn">Explorer</a>
                 </div>
                 
-                <div class="card">
+                <div class="card" data-search="astronomie étoiles planètes al-battani al-sufi al-biruni ciel cosmos">
                     <div class="card-icon">🔭</div>
                     <h3>Astronomie Avancée</h3>
                     <p>Explorez les découvertes célestes qui ont révolutionné notre vision du cosmos</p>
                     <a href="pages/astronomie.html" class="btn">Explorer</a>
                 </div>
                 
-                <div class="card">
+                <div class="card" data-search="mathématiques algèbre algorithme al-khwarizmi al-karaji omar-khayyam chiffres">
                     <div class="card-icon">🧮</div>
                     <h3>Mathématiques Géniales</h3>
                     <p>Admirez les concepts mathématiques qui ont transformé la science</p>
                     <a href="pages/mathematiques.html" class="btn">Explorer</a>
                 </div>
+
+                <div class="card" data-search="optique vision lumière ibn-al-haytham al-kindi chambre noire yeux">
+                    <div class="card-icon">👁️</div>
+                    <h3>Optique Visionnaire</h3>
+                    <p>Découvrez les secrets de la lumière et de la vision</p>
+                    <a href="pages/optique.html" class="btn">Explorer</a>
+                </div>
+
+                <div class="card" data-search="physique mouvement gravité ibn-sina al-biruni force énergie">
+                    <div class="card-icon">⚛️</div>
+                    <h3>Physique Fondamentale</h3>
+                    <p>Explorez les lois qui régissent l'univers</p>
+                    <a href="pages/physique.html" class="btn">Explorer</a>
+                </div>
+
+                <div class="card" data-search="chimie alchimie distillation jabir-ibn-hayyan al-razi réactions laboratoire">
+                    <div class="card-icon">🧪</div>
+                    <h3>Chimie Moderne</h3>
+                    <p>Des alchimistes aux premiers chimistes</p>
+                    <a href="pages/chimie.html" class="btn">Explorer</a>
+                </div>
             </div>
         </div>
 
-        <div class="container fade-in">
+        <div class="container fade-in-scroll">
             <h2>📊 Statistiques des Découvertes</h2>
             <table class="styled-table">
                 <thead>
@@ -97,5 +132,7 @@
         <p>&copy; 2024 - Les Grands Inventeurs Médiévaux - Projet pédagogique</p>
         <p>🪄 Découvrez les secrets des plus grands esprits scientifiques de l'histoire 🧪</p>
     </footer>
+
+    <script src="animations.js"></script>
 </body>
 </html>
